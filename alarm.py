@@ -1,6 +1,6 @@
-import time
+//{import time
 from datetime import datetime
-import winsound  # Works on Windows
+import os  # Use os.system for cross-platform sound
 
 alarm_time = input("Set alarm (HH:MM:SS): ")
 
@@ -12,7 +12,31 @@ while True:
 
     if current_time == alarm_time:
         print("\nWake up! Alarm ringing...")
-        winsound.Beep(1000, 3000)  # Frequency, duration
+        # Cross-platform beep (works on Linux/macOS)
+        os.system('echo -e "\a"')
+        break
+
+    time.sleep(1)}//
+
+
+import time
+from datetime import datetime
+
+alarm_time = input("Set alarm (HH:MM:SS): ")
+
+print(f"Alarm set for {alarm_time}")
+
+while True:
+    current_time = datetime.now().strftime("%H:%M:%S")
+
+    if current_time == alarm_time:
+        print("\n⏰ ALARM! Wake up!")
+
+        # Ring 10 times
+        for _ in range(10):
+            print("\a")
+            time.sleep(1)
+
         break
 
     time.sleep(1)
