@@ -1,3 +1,4 @@
+[![Pylint](https://github.com/eDDie-05/alarm/actions/workflows/pylint.yml/badge.svg)](https://github.com/eDDie-05/alarm/actions/workflows/pylint.yml)
 Alarm System (py-alarm)
 
 A lightweight, asynchronous alarm and timer manager written in modern Python (3.8+). Built using Python's native `asyncio` library, this package allows you to schedule one-shot timers, recurring alarms, and delayed task execution with minimal resource overhead.
